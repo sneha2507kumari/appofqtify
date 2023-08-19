@@ -1,0 +1,48 @@
+.content{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 6px;
+   width: 159px;
+   height:232px;
+   margin:15px;
+}
+.card{
+    width: 159px;
+height: 205px;
+flex-shrink: 0;
+margin-bottom: 10px;
+border-radius: 10px 10px 10px 10px;
+background: url(../../assets/RectanglePlain.png), lightgray 50% / cover no-repeat;
+
+}
+.subcardimage{
+    width: 159px;
+height: 170px;
+flex-shrink: 0;
+}
+.followers{
+    width:100%;
+    height:20%;
+    color:var(--color-white);
+    position:relative;
+    background-color: var(--color-white);
+}
+
+.followers h3{
+    background-color: var(--color-black);
+    left:5px;
+    top:10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border:1px solid var(--color-black);
+    border-radius: 65px;
+    font-weight:200;
+    font-size:15px;
+    position:absolute;
+
+}
+.title{
+font-size: 14px;
+font-style: normal;
+}
