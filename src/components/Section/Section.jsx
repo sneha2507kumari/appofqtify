@@ -5,9 +5,15 @@ import styles from '../Section/Section.module.css';
 
 const Section = ({ title, data, type,}) => {
   const [carouselToggle, setCarouselToggle] = useState(true);
-  const [initialCardsToShow,setcardsToShowWhenCollapsed]=useState(6);
+  const [initialCardsToShow,setCardsToShowWhenCollapsed]=useState(6);
+
 
   const handleToggle = () => {
+    if (carouselToggle) {
+      setCardsToShowWhenCollapsed(data.length);
+    } else {
+      setCardsToShowWhenCollapsed(6);
+    }
     setCarouselToggle(!carouselToggle);
   };
 
