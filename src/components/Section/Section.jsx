@@ -2,18 +2,13 @@ import { CircularProgress } from '@mui/material';
 import React, { useState } from 'react';
 import Card from '../Card/Card';
 import styles from '../Section/Section.module.css';
+import Carousel from '../Carousel/Carousel';
 
 const Section = ({ title, data, type,}) => {
   const [carouselToggle, setCarouselToggle] = useState(true);
-  const [initialCardsToShow,setCardsToShowWhenCollapsed]=useState(6);
 
 
   const handleToggle = () => {
-    if (carouselToggle) {
-      setCardsToShowWhenCollapsed(data.length);
-    } else {
-      setCardsToShowWhenCollapsed(6);
-    }
     setCarouselToggle(!carouselToggle);
   };
 
@@ -31,16 +26,12 @@ const Section = ({ title, data, type,}) => {
         <div className={styles.cardWrappers}>
           {carouselToggle ? (
             <div className={styles.wrapper}>
-              {data.slice(0,initialCardsToShow).map((items) => (
-                <Card data={items} type={type} key={items.id} />
-              ))}
-            </div>
-          ) : (
-            <div className={styles.wrapper}>
               {data.map((items) => (
                 <Card data={items} type={type} key={items.id} />
               ))}
             </div>
+          ) : (
+            <Carousel data={data} renderCardComponent={(data)=> <Card data={data} type={type}/>}/>
           )}
         </div>
       )}
