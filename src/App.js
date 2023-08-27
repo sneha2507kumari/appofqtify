@@ -1,6 +1,7 @@
 import Navbar from "./components/NavBar/Navbar";
 import Hero from "./components/Hero/Hero";
-import FaqAccordion from "./components/FaqAccordion/FaqAccordion";
+import Faq from "./components/Faq/Faq";
+import Footer from "./components/Footer/Footer";
 import { fetchTopAlbums,fetchNewAlbum,fetchAllSongs } from "./components/api/api";
 import { useEffect,useState } from "react";
 import Section from "./components/Section/Section";
@@ -89,6 +90,8 @@ function App() {
     <Section type="album" title="New Album" data={topNewAlbum} filteredDataValues={topAlbumData} /> 
     <Section type="song" title="Songs" data={songsData}  filteredData={filteredData} filteredDataValues={filteredDataValues} value={value}  handleToggle={handleToggle} handleChange={handleChange}toggle={toggle} /> 
     </div>
+    <Faq/>
+    <Footer/>
     </>
   );
 }

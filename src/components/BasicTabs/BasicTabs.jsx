@@ -48,16 +48,6 @@ export default function BasicTabs() {
           <Tab label="Blues" {...a11yProps(4)} />
         </Tabs>
       </Box>
-      <CustomTabPanel value={value} index={0}>
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={3}>
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={4}>
-      </CustomTabPanel>
     </Box>
   );
 }
