@@ -1,5 +1,6 @@
 import Navbar from "./components/NavBar/Navbar";
 import Hero from "./components/Hero/Hero";
+import FaqAccordion from "./components/FaqAccordion/FaqAccordion";
 import { fetchTopAlbums,fetchNewAlbum,fetchAllSongs } from "./components/api/api";
 import { useEffect,useState } from "react";
 import Section from "./components/Section/Section";
